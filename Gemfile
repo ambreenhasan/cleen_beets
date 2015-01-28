@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
 gem 'dotenv'
-gem 'beatport'
+
+gem 'id3tag'
