@@ -4,7 +4,7 @@ require 'logger'
 require 'dotenv'
 Dotenv.load
 
-
+require_relative '../app/models/itunes'
 
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
 
