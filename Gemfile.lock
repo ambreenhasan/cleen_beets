@@ -7,6 +7,7 @@ GEM
       faraday (~> 0.8.8)
       money (~> 5.1.1)
       signet
+    dotenv (1.0.2)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
     i18n (0.6.11)
@@ -26,3 +27,4 @@ PLATFORMS
 
 DEPENDENCIES
   beatport
+  dotenv
