@@ -1,30 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.6)
-    beatport (0.2.2)
-      addressable
-      faraday (~> 0.8.8)
-      money (~> 5.1.1)
-      signet
     dotenv (1.0.2)
-    faraday (0.8.9)
-      multipart-post (~> 1.2.0)
-    i18n (0.6.11)
-    jwt (1.2.1)
-    money (5.1.1)
-      i18n (~> 0.6.0)
-    multi_json (1.10.1)
-    multipart-post (1.2.0)
-    signet (0.4.5)
-      addressable (>= 2.2.3)
-      faraday (~> 0.8.1)
-      jwt (>= 0.1.5)
-      multi_json (>= 1.0.0)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    id3tag (0.8.0)
+    itunes-search-api (0.1.0)
+      httparty
+    json (1.8.2)
+    multi_xml (0.5.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  beatport
   dotenv
+  id3tag
+  itunes-search-api
