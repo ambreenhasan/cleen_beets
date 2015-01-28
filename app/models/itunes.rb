@@ -10,7 +10,7 @@ module ITunes
 
     def self.parse_results
       @results.each do |track|
-        puts "#{track["artistName"]} - #{track["collectionName"]} - #{track["trackCensoredName"]}"
+        p "#{track["artistName"]} - #{track["collectionName"]} - #{track["trackCensoredName"]}"
         puts Date._strptime(track["releaseDate"])[:year]
         puts track["primaryGenreName"]
         puts track["trackNumber"]
