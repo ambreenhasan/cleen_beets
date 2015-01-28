@@ -13,3 +13,7 @@ DB_PATH  = APP_ROOT.join('db', APP_NAME + ".db").to_s
 if ENV['DEBUG']
   ActiveRecord::Base.logger = Logger.new(STDOUT)
 end
+
+Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
+  filename = File.basename(model_file).gsub('.rb', '')
+end
