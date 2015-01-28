@@ -1,3 +1,5 @@
+require 'beatport'
+
 module Beatport
   class API
 
@@ -6,6 +8,7 @@ module Beatport
     end
 
     def self.search(searchable)
+      puts searchable
     end
   end
 end
