@@ -6,6 +6,7 @@ Dotenv.load
 
 require_relative '../app/models/itunes'
 require_relative '../app/models/id3_tag'
+require_relative '../app/models/file'
 
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
 
