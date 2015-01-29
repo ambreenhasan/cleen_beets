@@ -5,16 +5,16 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    id3tag (0.8.0)
     itunes-search-api (0.1.0)
       httparty
     json (1.8.2)
     multi_xml (0.5.5)
+    taglib-ruby (0.7.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   dotenv
-  id3tag
   itunes-search-api
+  taglib-ruby
