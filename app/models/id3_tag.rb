@@ -1,6 +1,5 @@
-require 'taglib'
-
 # TODO: refactor the hell out of this
+require 'taglib'
 require 'pathname'
 
 module ID3Tag
@@ -19,9 +18,12 @@ module ID3Tag
         tag.genre = "Indie House"
         tag.comment = " "
 
-          pn = Pathname.new(mp3_file)
+        pn = Pathname.new(mp3_file)
 
-        File.rename(mp3_file, "#{pn.dirname}/#{tag.artist} - #{tag.album} - #{tag.title}.mp3")
+        # File.rename(mp3_file, "#{pn.dirname}/#{tag.artist} - #{tag.album} - #{tag.title}.mp3")
+
+        # rename directory
+        FileUtils.mv(pn.dirname, "#{tag.artist} - #{tag.album} (#{tag.year})")
 
         file.save
 
