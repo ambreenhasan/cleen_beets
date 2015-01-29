@@ -10,15 +10,12 @@ Before you can bundle install the taglib-ruby gem, you first need to install tag
 
 ```bash
 brew install taglib
-```
 
-```bash
 bundle install
+
+ruby driver.rb filename.mp3
 ```
 
-```bash
-ruby driver.rb filename.mp3
-````
 
 # MVP v1 (current sprint)
 ~~* Edit ID3 Tags of audio file~~
