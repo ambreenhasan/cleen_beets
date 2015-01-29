@@ -11,13 +11,22 @@ module ID3Tag
         tag = file.id3v2_tag
         puts "Tags are empty." if tag.title.nil?
 
-        tag.title = "Pacifique"
-        tag.artist = "Damabiah"
-        tag.track = 2
-        tag.album = "Océans - Single"
+        tag.title = "System"
+        tag.artist = "Einmusik"
+        tag.track = 1
+        tag.album = "System"
         tag.year = 2015
-        tag.genre = "Indie House"
+        tag.genre = "Tech House"
         tag.comment = " "
+
+        # add picture frame
+        # apic = TagLib::ID3v2::AttachedPictureFrame.new
+        # apic.mime_type = "image/jpeg"
+        # apic.description = "Cover"
+        # apic.type = TagLib::ID3v2::AttachedPictureFrame::FrontCover
+        # apic.picture = File.open("/Users/ambodumbo/Desktop/einmusik.jpg", 'rb') { |f| f.read }
+
+        # tag.add_frame(apic)
 
         pn = Pathname.new(mp3_file)
 
