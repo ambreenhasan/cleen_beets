@@ -1,6 +1,7 @@
 # TODO: refactor the hell out of this
 require 'taglib'
 require 'pathname'
+require 'fileutils'
 
 module ID3Tag
   class Editor
@@ -20,10 +21,11 @@ module ID3Tag
 
         pn = Pathname.new(mp3_file)
 
-        # File.rename(mp3_file, "#{pn.dirname}/#{tag.artist} - #{tag.album} - #{tag.title}.mp3")
+        File.rename(mp3_file, "#{pn.dirname}/#{tag.artist} - #{tag.album} - #{tag.title}.mp3")
 
+        # directory_name = File.basename(mp3_file)
         # rename directory
-        FileUtils.mv(pn.dirname, "#{tag.artist} - #{tag.album} (#{tag.year})")
+        # FileUtils.mv "#{pn.dirname}/#{directory_name}", "#{pn.dirname}/ #{tag.artist} - #{tag.album} (#{tag.year})"
 
         file.save
 
