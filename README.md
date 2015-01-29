@@ -21,8 +21,8 @@ ruby driver.rb filename.mp3
 ````
 
 # MVP v1 (current sprint)
-* ~Edit ID3 Tags of audio file~
-* ~Rename file~
+~~* Edit ID3 Tags of audio file~~
+~~* Rename file~~
 * Rename Directory
 * Pull correct data for audio file from an API (iTunes for now)
 
