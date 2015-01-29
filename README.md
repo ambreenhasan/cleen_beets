@@ -2,7 +2,7 @@
 
 Cleen Beets is a small ruby program I wrote for myself in order to make my life easier whenever I want to edit ID3 tags for my audio files.
 
-Properly formatted data is pulled from iTunes, which is then used to edit
+Properly formatted data is pulled from iTunes, which is then used to edit the ID3 Tags and the filename.
 
 To currently run the file:
 
