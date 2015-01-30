@@ -19,13 +19,14 @@ ruby driver.rb filename.mp3
 
 ### MVP v1 (current sprint)
 * ~~Edit ID3 Tags of audio file~~
-* ~~Rename audio file~~
-* Rename Directory of audio file
-* Pull correct data for audio file from an API (iTunes for now)
+* ~~Rename audio file with accurate information~~
+* Rename Directory of album with accurate information
+* ~~Pull correct data for audio file from an API (iTunes for now)~~
 
 ### MVP v2
 * Convert program into a gem
 * add menu so users have control over audio file format
 * integrate Beatport for more data
+* Edit ID3 Tags for an album in one command
 
 
