@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    dotenv (1.0.2)
+    colorize (0.7.5)
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -15,6 +15,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
+  colorize
   itunes-search-api
   taglib-ruby
