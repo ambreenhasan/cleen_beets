@@ -2,6 +2,7 @@
 require 'taglib'
 require 'pathname'
 require 'fileutils'
+require_relative 'itunes'
 
 module ID3Tag
   class Editor
@@ -9,22 +10,23 @@ module ID3Tag
       TagLib::MPEG::File.open(mp3_file) do |file|
 
         tag = file.id3v2_tag
-        puts "Tags are empty." if tag.title.nil?
-
-        tag.title = "System"
-        tag.artist = "Einmusik"
-        tag.track = 1
-        tag.album = "System"
-        tag.year = 2015
-        tag.genre = "Tech House"
-        tag.comment = " "
+        # puts "Tags are empty." if tag.title.nil?
+        ITunes::API.parse_results.each do |track|
+          tag.title = track[:track_censored_name]
+          tag.artist = track[:artist_name]
+          tag.track = track[:track_number]
+          tag.album = track[:collection_name]
+          tag.year = track[:release_year]
+          tag.genre = "Tech House"
+          tag.comment = " "
+        end
 
         # add picture frame
         # apic = TagLib::ID3v2::AttachedPictureFrame.new
         # apic.mime_type = "image/jpeg"
         # apic.description = "Cover"
         # apic.type = TagLib::ID3v2::AttachedPictureFrame::FrontCover
-        # apic.picture = File.open("/Users/ambodumbo/Desktop/einmusik.jpg", 'rb') { |f| f.read }
+        # apic.picture = File.open("", 'rb') { |f| f.read }
 
         # tag.add_frame(apic)
 
