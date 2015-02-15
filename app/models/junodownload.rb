@@ -18,6 +18,8 @@ module JunoDownload
       home_page = juno_search.submit
 
       tracks_page = home_page.link_with(:text => "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTracks\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t").click
+
+      pp tracks_page
     end
   end
 end
