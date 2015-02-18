@@ -17,7 +17,7 @@ module ID3Tag
           tag.track = track[:track_number]
           tag.album = track[:collection_name]
           tag.year = track[:release_year]
-          tag.genre = "Tech House"
+          tag.genre = track[:primary_genre_name]
           tag.comment = " "
         end
 

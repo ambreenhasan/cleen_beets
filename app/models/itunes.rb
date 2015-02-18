@@ -1,4 +1,5 @@
 require 'itunes-search-api'
+require 'taglib'
 require 'pathname'
 require 'Date'
 
@@ -11,11 +12,14 @@ module ITunes
     end
 
     def self.parse_search(directory_path)
-      file_base = File.basename(directory_path)
-      cleaned = file_base.gsub(/[\.,-\/#$%\^&\*;:{}=\-_`~()]/, "")
-      # compare with id3 tags
-      searchable_terms = cleaned.split(" ").first(3).join(" ")
-      searchable_terms
+     searchable_terms = []
+     TagLib::MPEG::File.open(directory_path) do |file|
+      tag = file.id3v2_tag
+      return "File cannot be edited." if tag.artist.nil? || tag.title.nil?
+      searchable_terms << tag.artist
+      searchable_terms << tag.title
+      end
+      searchable_terms.join(" ")
     end
 
     def self.parse_results
