@@ -10,7 +10,7 @@ module ITunes
       input = parse_search(searchable)
       @results = ITunesSearchAPI.search(:term => input, :country => "US", :media => "music")
 
-      raise NoResultsError if @results
+      raise NoResultsError if @results.empty?
     end
 
     def self.parse_search(directory_path)

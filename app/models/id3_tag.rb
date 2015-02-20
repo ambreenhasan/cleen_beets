@@ -32,6 +32,8 @@ module ID3Tag
 
         pn = Pathname.new(mp3_file)
 
+        # TODO List: Change album names that include / to _
+
         File.rename(mp3_file, "#{pn.dirname}/#{tag.artist} - #{tag.album} - #{tag.title}.mp3")
 
         # directory_name = File.basename(mp3_file)
