@@ -42,8 +42,6 @@ module ID3Tag
 
         puts "File has been saved and renamed."
       end
-
-
     end
   end
 end

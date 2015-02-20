@@ -9,6 +9,8 @@ module ITunes
     def self.search(searchable)
       input = parse_search(searchable)
       @results = ITunesSearchAPI.search(:term => input, :country => "US", :media => "music")
+
+      raise NoResultsError if @results
     end
 
     def self.parse_search(directory_path)
@@ -31,3 +33,5 @@ module ITunes
   end
 end
 
+class NoResultsError < StandardError
+end
