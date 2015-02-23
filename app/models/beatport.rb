@@ -17,11 +17,9 @@ module Beatport
 
       page = agent.page.link_with(:text => 'Estroe, Pawas - Jujeh').click
 
-      page.search('#body > div.line.release-detail > div.unit.lastUnit > div:nth-child(5) > table').each do |track|
-        track.children.first.attributes.each do |parsable|
-          pp parsable
-        end
-      end
+      page_table = page.search('#body > div.line.release-detail > div.unit.lastUnit > div:nth-child(5) > table')
+
+      pp page_table
 
       @results = []
     end
