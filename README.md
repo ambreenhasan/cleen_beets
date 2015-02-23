@@ -25,7 +25,7 @@ ruby driver.rb filename.mp3
 ### MVP v2 (current sprint)
 * Convert program into a gem
 * Add menu so users have control over audio file format
-* Integrate Beatport and/or JunoDownload for more data
+* Integrate Beatport for more data
 * Edit ID3 Tags for an album
 * Rename Directory of album with accurate information
 
